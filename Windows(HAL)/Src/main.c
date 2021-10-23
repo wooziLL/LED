@@ -97,13 +97,7 @@ int main(void)
   {
     char data[]="hello windows!\n";
 		HAL_UART_Transmit(&huart1, (uint8_t *)data, 15, 0xffff);
-		//高电平点亮A4
-		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_SET);
-		
-		HAL_Delay(100);
-		//低电平熄灭A12
-		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_4,GPIO_PIN_RESET);
-		HAL_Delay(900);
+		HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
